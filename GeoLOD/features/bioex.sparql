@@ -1,0 +1,40 @@
+{
+"name":"http://sparql.lod4wfs.de/bioex",
+"title":"bioex",
+"abstract":"no abstract",
+"keywords":"no keywords",
+"geometryVariable":"?wkt",
+"endpoint":"http://ec2-54-94-208-47.sa-east-1.compute.amazonaws.com:8080/parliament/sparql",
+"crs":"EPSG:4326",
+"enabled":"true",
+"query":"PREFIX afn: <http://jena.hpl.hp.com/ARQ/function#>
+PREFIX fn: <http://www.w3.org/2005/xpath-functions#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+PREFIX gml: <http://www.opengis.net/ont/gml#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX par: <http://parliament.semwebcentral.org/parliament#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sf: <http://www.opengis.net/ont/sf#>
+
+SELECT  ?uri ?wkt ?sn ?eu ?cl
+WHERE
+  { GRAPH <http://rs.tdwg.org/dwc/iri/sib/>
+      { ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> 
+        <http://rs.tdwg.org/dwc/terms/ocurrence> .
+        ?uri <http://www.opengis.net/ont/geosparql#defaultGeometry> ?geo2 .
+         ?uri <http://datos.clima.co/clima/clasif>  ?cl.
+         ?uri  <http://rs.tdwg.org/dwc/terms/scientificName>  ?sn.
+         ?uri <http://www.w3.org/2002/07/owl#sameAs> ?eu.
+        ?geo2 <http://www.opengis.net/ont/geosparql#asWKT> ?wkt.
+        <http://datos.igac.gov.co/resource/municipio/id/25286>
+        <http://www.opengis.net/ont/geosparql#defaultGeometry> ?metry.
+        ?metry <http://www.opengis.net/ont/geosparql#asWKT> ?seri.      
+        FILTER (geof:sfWithin(?wkt, ?seri))
+      }
+  }
+
+
+"
+}

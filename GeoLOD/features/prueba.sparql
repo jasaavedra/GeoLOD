@@ -1,0 +1,19 @@
+{
+"name":"http://sparql.lod4wfs.de/prueba",
+"title":"prueba",
+"abstract":"abstract",
+"keywords":"keywords",
+"geometryVariable":"?wkt",
+"endpoint":"http://localhost:9090/parliament/sparql",
+"crs":"EPSG:4326",
+"enabled":"true",
+"query":"SELECT DISTINCT  ?b ?wkt
+WHERE
+  { GRAPH <http://rs.tdwg.org/dwc/iri/sib/>
+      { ?b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rs.tdwg.org/dwc/terms/ocurrence> .
+        ?b <http://www.opengis.net/ont/geosparql#defaultGeometry> ?geo .
+        ?geo <http://www.opengis.net/ont/geosparql#asWKT> ?wkt
+      }
+  }
+LIMIT   5"
+}
