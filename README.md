@@ -1,4 +1,4 @@
-LOD4WFS - Linked Open Data for Web Feature Services Adapter (Beta)
+GeoLOD - Framework for transforming, linking and enrichment of Geospatial data to Linked Open Data (Beta)
 ==============
 
 The LOD4WFS Adapter (Linked Open Data for Web Feature Services) is a service to provide access to Linked Geographic Data from Geographical Information Systems (GIS). It implements a service which listens to WFS requests and converts these requests into the SPARQL Query Language for RDF. After the SPARQL Query is processed, the LOD4WFS Adapter receives the RDF result set from the Triple Store, encodes it as a WFS XML document, and returns it to the client, e.g. a GIS. 
