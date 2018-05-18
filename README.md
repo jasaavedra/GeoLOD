@@ -1,7 +1,7 @@
 GeoLOD – Framework for transforming, linking and enrichment of geospatial data to LOD (Beta)
 ==============
 
-This framework was built looking to give tools to perform the publication, linking and enriching of geospatial data as Linked Open Data using the standard GeoSPARQL to represent their geometrical and spatial relation aspects. All the tools work as web form where you should give some parameters. Following a more detailed desription:
+This framework was built looking to give tools to perform the publication, linking, enriching and visualization of geospatial data as Linked Open Data using the standard GeoSPARQL to represent their geometrical and spatial relation aspects. All the tools work as web form where you should give some parameters. Following a more detailed description:
 
 ------------------------------------------------------------
 
@@ -105,17 +105,14 @@ Enrichment attributes identification (optional)
 * Enrichment attribute 2: name of the second attribute to use in the enrichment
 
 
+------------------------------------------------------------
+
+The code was integrated over LOD4WFS2
+ and could be deployed using the same procces, for more information go to: [LOD4WFS Documentation](http://ifgi.uni-muenster.de/~j_jone02/lod4wfs/LOD4WFS_documentation.pdf) 
 
 
-
-
-
-
-
-
-
-
+A example of map viewer with SPARQL update using a case of use with biodiversity information of the department of Cundinamarca (Colombia) is available by default in: http://localhost:8088/bioviewer.jsp
 
 ------------------------------------------------------------
 1. http://mayor2.dia.fi.upm.es/oeg-upm/index.php/es/technologies/151-geometry2rdf/index.html
-
+2. https://github.com/jimjonesbr/lod4wfs
