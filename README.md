@@ -81,7 +81,7 @@ Configuration parameters:
 WFS2LD_Connector (http://localhost:8088/wfs2ld_connector.jsp)
 
 
-This tool make an spatial analysis between instances published as LOD (with geometries serialized as WKT) and through a WFS service, if a spatial relation is found a link showing de type of the spatial relation is build. It has an option to transform and include two attributes to the RDF. 
+This tool make an spatial analysis between instances published as LOD (with geometries serialized as WKT) and through a WFS service, if a spatial relation is found a link showing de type of the spatial relation is build. 
  
 
 Configuration parameters:
@@ -99,11 +99,36 @@ WFS source
 * Get capabilities: URI of the get capabilities request
 * Layer name: name of the layer which will be used
 
-Enrichment attributes identification (optional)
+
+------------------------------------------------------------
+
+
+
+WFS2LD_Richer (http://localhost:8088/wfs2ld_richer.jsp)
+
+
+This tool make an spatial analysis between instances published as LOD (with geometries serialized as WKT) and through a WFS service, if a spatial relation is found a link showing de type of the spatial relation is build and include two attributes to the RDF (enrichment). 
+ 
+
+Configuration parameters:
+
+LOD source
+
+* Endpoint: Access URI to the endpoint where is the data stored 
+* Query: SPARQL query to limit the instances and obtain the URI and the geometry (in WKT)
+* Geometry variable: identification of the geometry variable in the SPARQL query, for example:?geo 
+* URI variable: identification of the URI variable in the SPARQL query, for example:?uri
+* Output file: location of the folder and name of the output file 
+
+WFS source
+
+* Get capabilities: URI of the get capabilities request
+* Layer name: name of the layer which will be used
+
+Enrichment attributes identification 
 
 * Enrichment attribute 1: name of the fist attribute to use in the enrichment
 * Enrichment attribute 2: name of the second attribute to use in the enrichment
-
 
 ------------------------------------------------------------
 

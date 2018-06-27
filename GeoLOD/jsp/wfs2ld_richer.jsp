@@ -12,15 +12,15 @@
 <script src="js/map.js"></script>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>wfs2ld_connector</title>
+        <title>wfs2ld_richer</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     </head>
     <body>
         <div class="bs-docs-featurette">
   			<div class="container">
-   			 <h2 class="bs-docs-featurette-title">WFS2LD_Connector</h2>
-             <p> Linking with WFS data using spatial relations </p>
+   			 <h2 class="bs-docs-featurette-title">WFS2LD_Richer</h2>
+             <p> Enriching with WFS data using spatial relations </p>
       <div class="panel panel-primary">
     <div class="panel-body"> 
 		<form name="form_feature" method="POST" action="rdfwfslinkValidation.jsp" class="form-horizontal">  
@@ -34,11 +34,11 @@
     <input id="layer" type="text" name="layer" class="form-control">
       
 </td>
-<!--<td>
-    //<br>Enrichment atributte 1</br>
-    //<input id="enrichment1" type="text" name="enrichment1" class="form-control">
-    //<br>Enrichment atributte 2</br>
-    //<input id="enrichment2" type="text" name="enrichment2" class="form-control">     
+<td>
+    <br>Enrichment atributte 1</br>
+    <input id="enrichment1" type="text" name="enrichment1" class="form-control">
+    <br>Enrichment atributte 2</br>
+    <input id="enrichment2" type="text" name="enrichment2" class="form-control">     
   
 </td>
 <td>
@@ -47,7 +47,7 @@
     <br>URI Enrichment atributte 2</br>
     <input id="urienrichment2" type="text" name="urienrichment2" class="form-control">     
   
-</td>-->
+</td>
 
 <td>
     <br>Endpoint</br>
